@@ -17,12 +17,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Categories <span class="arrow"></span></a>
                     <nav class="nav columns">
-                        <a class="nav-link" href="#">Bootstrap</a>
-                        <a class="nav-link" href="#">Dribbble</a>
-                        <a class="nav-link" href="#">Dropbox</a>
-                        <a class="nav-link" href="#">GitHub</a>
-                        <a class="nav-link" href="#">Gmail</a>
+                        <a class="nav-link" href="#">Tech</a>
+                        <a class="nav-link" href="#">Code</a>
+                        <a class="nav-link" href="#">Self</a>
                     </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">#Ramadhan</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
