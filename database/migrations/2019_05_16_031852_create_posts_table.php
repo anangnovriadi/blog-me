@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->string('name');
             $table->text('description');
             $table->string('tag');
@@ -23,7 +23,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('posts', function ($table) {
             $table->foreign('category_id')->references('id')->on('categories');
         });
     }
