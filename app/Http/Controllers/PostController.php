@@ -8,7 +8,7 @@ use App\Post;
 class PostController extends Controller
 {
     public function view() {
-        $posts = Post::orderBy('created_at', 'DESC')->limit(2)->get();
+        $posts = Post::orderBy('created_at', 'DESC')->limit(4)->get();
 
         return view('home')->withPosts($posts);
     }
@@ -21,7 +21,7 @@ class PostController extends Controller
 
         if(!$posts->isEmpty()) {
             $output .= '<div class="row gap-y">';
-            
+
             foreach($posts as $post) {
                 $output .= 
                     '<div class="col-md-6">
