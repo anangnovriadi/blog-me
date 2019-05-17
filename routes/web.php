@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/','PostController@view');  
+Route::post('/load','PostController@loadMore');
 
 Route::get('/detail', function () {
     return view('detail');
