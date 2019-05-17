@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <h4>LAWAN RASA PUAS DIRI, TERUSLAH BERKEMBANG.</h4>
+                    <h4 id="txt"></h4>
                     {{-- <p class="lead-2 opacity-90 mt-6">"Sesungguhnya sebaik - baiknya amal adalah yang paling kontinu meski ia sedikit." (HR.Ibnu Majah)</p> --}}
                 </div>
             </div>
@@ -91,6 +91,7 @@
             </div>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js" />
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -117,5 +118,17 @@
                });
            });  
         }); 
+    </script>
+    <script>
+        new TypeIt('#txt', {
+            speed: 50,
+            startDelay: 900
+        })
+            .type('Learn Together, ')
+            .pause(500)
+            .options({speed: 140, deleteSpeed: 75})
+            .pause(650)
+            .type('Grow Together.')
+        .go();  
     </script>
 @endsection

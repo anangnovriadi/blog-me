@@ -36,6 +36,5 @@
     <!-- Scripts -->
     <script src="{{ asset('web/assets/js/page.min.js') }}"></script>
     <script src="{{ asset('web/assets/js/script.js') }}"></script>
-
   </body>
 </html>
