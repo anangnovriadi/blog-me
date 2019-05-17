@@ -16,6 +16,7 @@ class PostsTableSeeder extends Seeder
             'category_id' => 1,
             'description' => Str::random(40),
             'tag' => Str::random(4),
+            'image_thumb' => Str::random(10),
             'author' => Str::random(5)
         ]);
     }
