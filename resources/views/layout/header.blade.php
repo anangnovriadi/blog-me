@@ -3,8 +3,8 @@
         <div class="navbar-left">
             <button class="navbar-toggler" type="button">☰</button>
             <a class="navbar-brand" href="../index.html">
-              <img class="logo-dark" src="{{ asset('web/assets/img/logo-dark.png') }}" alt="logo">
-              <img class="logo-light" src="{{ asset('web/assets/img/logo-light.png') }}" alt="logo">
+              <img class="logo-dark" src="{{ asset('web/assets/img/logo-nang-dark.png') }}" alt="logo">
+              <img class="logo-light" src="{{ asset('web/assets/img/logo-nang.png') }}" alt="logo">
             </a>
         </div>
 
