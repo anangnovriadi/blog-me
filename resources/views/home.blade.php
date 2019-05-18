@@ -91,7 +91,6 @@
             </div>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js" />
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -119,16 +118,14 @@
            });  
         }); 
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
     <script>
         new TypeIt('#txt', {
             speed: 50,
             startDelay: 900
         })
-            .type('Learn Together, ')
-            .pause(500)
-            .options({speed: 140, deleteSpeed: 75})
-            .pause(650)
-            .type('Grow Together.')
+            .type('Learn Together, Grow Together and Add Insight For Future.')
         .go();  
     </script>
 @endsection

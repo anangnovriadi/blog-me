@@ -23,10 +23,10 @@
                     </nav>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">#Ramadhan</a>
+                    <a class="nav-link" href="https://images.unsplash.com/photo-1504616796709-0f9a325affb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80">#Ramadhan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/anang-novriadi-b04690114/">About</a>
                 </li>
             </ul>
         </section>
