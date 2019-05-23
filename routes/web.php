@@ -22,6 +22,6 @@ Route::get('/detail', function () {
 // Admin
 Route::prefix('admin')->group(function() {
     Route::get('/dashboard', function() {
-        return view('admin.app');
+        return view('admin.dashboard');
     });
 });
