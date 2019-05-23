@@ -17,3 +17,11 @@ Route::post('/load','PostController@loadMore');
 Route::get('/detail', function () {
     return view('detail');
 });
+
+
+// Admin
+Route::prefix('admin')->group(function() {
+    Route::get('/dashboard', function() {
+        return view('admin.app');
+    });
+});
