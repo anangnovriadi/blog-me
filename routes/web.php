@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/','PostController@view');  
-Route::post('/load','PostController@loadMore');
+Route::get('/', 'PostController@view');  
+Route::post('/load', 'PostController@loadMore');
 
 Route::get('/detail', function () {
     return view('detail');
