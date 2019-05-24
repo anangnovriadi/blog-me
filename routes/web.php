@@ -11,6 +11,7 @@
 |
 */
 
+// Front
 Route::get('/', 'PostController@view');  
 Route::post('/load', 'PostController@loadMore');
 
