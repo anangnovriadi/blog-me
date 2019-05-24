@@ -21,11 +21,8 @@ Route::get('/detail', function () {
 
 // Admin
 Route::prefix('admin')->group(function() {
-    Route::get('/dashboard', function() {
-        return view('admin.dashboard');
-    });
-
-    Route::get('/login', function() {
-        return view('admin.login');
-    });
+    Auth::routes();
+    Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+    Route::post('/logout', 'Auth\LogoutController@logout')->name('logout');
+    Route::get('/dashboard', 'Admin\DashboardController@view')->name('dashboard');
 });
