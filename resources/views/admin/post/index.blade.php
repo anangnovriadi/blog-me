@@ -7,7 +7,9 @@
                 <h1>Data Post</h1>
             </div>
             <div class="pb-4">
-                <a href="{{ route('post.create') }}" class="btn btn-primary">Add Post</a>
+                <a href="{{ route('post.create') }}" class="btn btn-icon icon-left btn-primary">
+                    <i class="fas fa-plus"></i> Create Post
+                </a>
             </div>
             <div class="section-body">
                 <div class="row">
