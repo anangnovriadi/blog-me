@@ -4,7 +4,7 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Form Post</h1>
+                <h1>Form and Data Category</h1>
             </div>
             <div class="section-body">
                 <form action="{{ route('category.store') }}" method="post">
