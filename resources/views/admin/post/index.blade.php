@@ -40,12 +40,18 @@
                                                 <td>{{ $post->name }}</td>
                                                 <td>{{ $post->author }}</td>
                                                 <td>{{ $post->tag }}</td>
-                                                <td>{{ $post->category_id }}</td>
+                                                <td>{{ $post->category->name }}</td>
                                                 <td>{{ $post->image_thumb }}</td>
                                                 <td>
                                                     <div style="display: flex;">
-                                                        <a href="#" class="btn btn-secondary mr-2">Edit</a>
-                                                        <a href="#" class="btn btn-danger">Delete</a>
+                                                        <a href="{{ route('post.edit', $post->id) }}" class="btn btn-secondary mr-2">Edit</a>
+                                                        <form class="" style="padding-left: 2px;" method="post" action="{{ route('post.destroy', $post->id) }}">
+                                                            {{ csrf_field() }}
+                                                            {{ method_field('DELETE') }}
+                                                            <button type="submit" class="btn btn-danger">
+                                                                Delete
+                                                            </button>
+                                                        </form>
                                                     </div>
                                                 </td>
                                             </tr>

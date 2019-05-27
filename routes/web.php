@@ -19,14 +19,6 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
-Route::get('/form', function () {
-    return view('admin.post.create');
-});
-
-Route::get('/table', function () {
-    return view('admin.post.index');
-});
-
 
 // Admin
 Route::prefix('admin')->group(function() {
@@ -38,6 +30,9 @@ Route::prefix('admin')->group(function() {
     Route::get('/post/create', 'Admin\PostController@create')->name('post.create');
     Route::post('/post/create', 'Admin\PostController@store')->name('post.store');
     Route::get('/post', 'Admin\PostController@view')->name('post.index');
+    Route::get('/post/edit/{id}', 'Admin\PostController@edit')->name('post.edit');
+    Route::patch('/post/edit/{id}', 'Admin\PostController@update')->name('post.update');
+    Route::delete('/post/delete/{id}', 'Admin\PostController@destroy')->name('post.destroy');
 
     Route::get('/category', 'Admin\CategoryController@view')->name('category.index');
     Route::post('/category/create', 'Admin\CategoryController@store')->name('category.store');

@@ -4,29 +4,30 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <h1>Form Post</h1>
+                <h1>Form Edit Post</h1>
             </div>
             <div class="section-body">
-                <form action="{{ route('post.store') }}" method="post">
+                <form action="{{ route('post.update', $posts->id) }}" method="post">
                     {{ csrf_field() }}
+                    {{ method_field('PATCH') }}
                     <div class="row">
                         <div class="col-md-6 col-lg-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Please insert data in below</h4>
+                                    <h4>Please edit data in below</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Name">
+                                        <input type="text" name="name" class="form-control" placeholder="Name" value="{{ $posts->name }}">
                                     </div>
                                     <div class="form-group">
                                         <label>Author</label>
-                                        <input type="text" name="author" class="form-control" placeholder="Author">
+                                        <input type="text" name="author" class="form-control" placeholder="Author" value="{{ $posts->author }}">
                                     </div>
                                     <div class="form-group">
                                         <label>Tags</label>
-                                        <input type="text" name="tag" class="form-control inputtags" placeholder="Tag">
+                                        <input type="text" name="tag" class="form-control inputtags" placeholder="Tag" value="{{ $posts->tag }}">
                                     </div>
                                     <div class="form-group">
                                         <label>Category</label>
@@ -38,7 +39,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Image Thumb</label>
-                                        <input type="file" name="image_thumb" class="form-control">
+                                        <input type="file" name="image_thumb" class="form-control" value="{{ $posts->image_thumb }}">
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +50,7 @@
                                     <div class="form-group">
                                         <label>Content</label>
                                         <div class="">
-                                            <textarea name="description" class="summernote"></textarea>
+                                            <textarea name="description" class="summernote">{{ $posts->description }}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">

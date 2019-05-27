@@ -130,7 +130,7 @@
             speed: 50,
             startDelay: 900
         })
-            .type('Learn Together, Grow Together and Add Insight For Future.')
+            .type('Learn Together, Grow Together and Add Insights For Future.')
         .go();  
     </script>
 @endsection
