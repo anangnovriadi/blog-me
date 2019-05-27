@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="{{ asset('admin/node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}">
   <link rel="stylesheet" href="{{ asset('admin/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css') }}">
   <link rel="stylesheet" href="{{ asset('admin/node_modules/summernote/dist/summernote-bs4.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
   
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
@@ -56,6 +57,9 @@
    <script src="{{ asset('admin/node_modules/select2/dist/js/select2.full.min.js') }}"></script>
    <script src="{{ asset('admin/node_modules/selectric/public/jquery.selectric.min.js') }}"></script>
    <script src="{{ asset('admin/node_modules/summernote/dist/summernote-bs4.js') }}"></script>
+   <script src="{{ asset('admin/node_modules/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+   <script src="{{ asset('admin/node_modules/datatables/media/js/jquery.dataTables.min.js') }}.."></script>
+   <script src="{{ asset('admin/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
  
    <!-- Template JS File -->
    <script src="{{ asset('admin/js/scripts.js') }}"></script>
@@ -63,5 +67,6 @@
  
    <!-- Page Specific JS File -->
    <script src="{{ asset('admin/js/page/forms-advanced-forms.js') }}"></script>
+   <script src="{{ asset('admin/js/page/modules-datatables.js') }}"></script>
 </body>
 </html>

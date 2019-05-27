@@ -15,7 +15,7 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>CMS</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="layout-default.html">Post</a></li>
+                    <li><a class="nav-link" href="{{ route('post.index') }}">Post</a></li>
                     <li><a class="nav-link" href="layout-transparent.html">Category</a></li>
                 </ul>
             </li>
