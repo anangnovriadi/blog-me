@@ -15,6 +15,9 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
     <link rel="icon" href="{{ asset('web/assets/img/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('admin/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css') }}">
+
+    @yield('add_css')
   </head>
 
   <body>
@@ -34,6 +37,7 @@
 
 
     <!-- Scripts -->
+    @yield('add_js')
     <script src="{{ asset('web/assets/js/page.min.js') }}"></script>
     <script src="{{ asset('web/assets/js/script.js') }}"></script>
     
