@@ -38,4 +38,7 @@ Route::prefix('admin')->group(function() {
     Route::get('/post/create', 'Admin\PostController@create')->name('post.create');
     Route::post('/post/create', 'Admin\PostController@store')->name('post.store');
     Route::get('/post', 'Admin\PostController@view')->name('post.index');
+
+    Route::get('/category', 'Admin\CategoryController@view')->name('category.index');
+    Route::post('/category/create', 'Admin\CategoryController@store')->name('category.store');
 });
