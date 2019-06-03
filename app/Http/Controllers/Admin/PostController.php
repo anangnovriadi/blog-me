@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Post;
 use App\Model\Category;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -17,6 +18,7 @@ class PostController extends Controller
 
     public function store(Request $request) {
         $pathToStore = public_path('admin');
+        $slug = Str::slug($request->name);
 
         if($request->hasFile('image_thumb')) {
             $foto = $request->file('image_thumb');
@@ -32,6 +34,7 @@ class PostController extends Controller
             'category_id' => $request->category_id,
             'author' => $request->author,
             'tag' => $request->tag,
+            'slug_name' => $slug,
             'image_thumb' => $foto_name
         ]);
 
