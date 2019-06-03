@@ -7,7 +7,7 @@
                 <h1>Form Edit Post</h1>
             </div>
             <div class="section-body">
-                <form action="{{ route('post.update', $posts->id) }}" method="post">
+                <form action="{{ route('post.update', $posts->id) }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('PATCH') }}
                     <div class="row">

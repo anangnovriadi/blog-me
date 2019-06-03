@@ -17,13 +17,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Categories <span class="arrow"></span></a>
                     <nav class="nav columns">
-                        <a class="nav-link" href="#">Tech</a>
-                        <a class="nav-link" href="#">Code</a>
-                        <a class="nav-link" href="#">Self</a>
+                        <a class="nav-link" href="#">Technology</a>
+                        <a class="nav-link" href="#">Programming</a>
+                        <a class="nav-link" href="#">Devops</a>
                     </nav>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://images.unsplash.com/photo-1504616796709-0f9a325affb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80">#Ramadhan</a>
+                    <a class="nav-link" href="https://images.unsplash.com/photo-1504616796709-0f9a325affb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80">Artikel</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/anang-novriadi-b04690114/">About</a>

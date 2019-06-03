@@ -16,14 +16,26 @@ class PostController extends Controller
     }
 
     public function store(Request $request) {
+        $pathToStore = public_path('admin');
+
+        if($request->hasFile('image_thumb')) {
+            $foto = $request->file('image_thumb');
+            $filename = $foto->getClientOriginalName(); 
+            $extension = $foto->getClientOriginalExtension();
+            $foto_name = sha1($filename . time()) . '.' . $extension;
+            $foto->move($pathToStore, $foto_name);
+        }
+
         Post::create([
             'name' => $request->name,
             'description' => $request->description,
             'category_id' => $request->category_id,
             'author' => $request->author,
             'tag' => $request->tag,
-            'image_thumb' => $request->image_thumb
+            'image_thumb' => $foto_name
         ]);
+
+        
             
         return redirect()->route('post.index');
     }
@@ -42,16 +54,21 @@ class PostController extends Controller
     }
 
     public function update(Request $request, $id) {
-        $posts = Post::find($id);
+        $request_all = $request->all();
+        $posts = Post::findOrFail($id);
+        $pathToStore = public_path('admin');
 
-        $posts->update([
-            'name' => $request->name,
-            'description' => $request->description,
-            'category_id' => $request->category_id,
-            'author' => $request->author,
-            'tag' => $request->tag,
-            'image_thumb' => $request->image_thumb
-        ]);
+        if($request->hasFile('image_thumb')) {
+            $foto = $request->file('image_thumb');
+            $filename = $foto->getClientOriginalName(); 
+            $extension = $foto->getClientOriginalExtension();
+            $foto_name = sha1($filename . time()) . '.' . $extension;
+            $foto->move($pathToStore, $foto_name);
+
+            $request_all['image_thumb'] = "{$foto_name}";
+        }
+
+        $posts->update($request_all);
 
         return redirect()->route('post.index');
     }

@@ -7,7 +7,7 @@
                 <h1>Form Post</h1>
             </div>
             <div class="section-body">
-                <form action="{{ route('post.store') }}" method="post">
+                <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-md-6 col-lg-6">
@@ -18,19 +18,19 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Name">
+                                        <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Author</label>
-                                        <input type="text" name="author" class="form-control" placeholder="Author">
+                                        <input type="text" name="author" class="form-control" placeholder="Author" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Tags</label>
-                                        <input type="text" name="tag" class="form-control inputtags" placeholder="Tag">
+                                        <input type="text" name="tag" class="form-control inputtags" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Category</label>
-                                        <select name="category_id" class="form-control">
+                                        <select name="category_id" class="form-control" required>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}">{{ $category->name }}</option>  
                                             @endforeach
@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Image Thumb</label>
-                                        <input type="file" name="image_thumb" class="form-control">
+                                        <input type="file" name="image_thumb" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                                     <div class="form-group">
                                         <label>Content</label>
                                         <div class="">
-                                            <textarea name="description" class="summernote"></textarea>
+                                            <textarea name="description" class="summernote" required></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
