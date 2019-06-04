@@ -19,6 +19,8 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
+Route::get('/detail/{slug}', 'PostController@detail')->name('detail');
+
 
 // Admin
 Route::prefix('admin')->group(function() {

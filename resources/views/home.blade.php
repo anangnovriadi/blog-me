@@ -21,23 +21,25 @@
                                 @foreach ($posts as $post)
                                     <div class="col-md-6">
                                         <div class="card border hover-shadow-6 mb-6">
-                                            <a href="#"><img class="card-img-top" src="{{ asset('admin/'.$post->image_thumb) }}" alt="Card image cap"></a>
+                                            <a href="{{ route('detail', $post->slug_name) }}"><img class="card-img-top" src="{{ asset('admin/'.$post->image_thumb) }}" alt="Card image cap"></a>
                                             <div class="p-6 text-center">
-                                                <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">{{ $post->category->name }}</a></p>
-                                                <h5 class="mb-0"><a class="text-dark" href="#">{{ $post->name }}</a></h5>
+                                                <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="{{ route('detail', $post->slug_name) }}">{{ $post->category->name }}</a></p>
+                                                <h5 class="mb-0"><a class="text-dark" href="{{ route('detail', $post->slug_name) }}">{{ $post->name }}</a></h5>
                                             </div>
                                         </div>
                                     </div>
                                 @endforeach
                             </div>
+                            @if (count($posts) >= 4)
                             <div class="text-center" id="remove-row">
                                 <button id="btn-more" data-id="{{ $post->id }}" class="btn btn-lg btn-primary" type="button">Load More</button>
                             </div>
-                            <iframe
+                            @endif
+                            {{-- <iframe
                                 src="https://carbon.now.sh/embed/?bg=rgba(250%2C251%2C251%2C1)&t=monokai&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fm=dm&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=const%2520pluckDeep%2520%253D%2520key%2520%253D%253E%2520obj%2520%253D%253E%2520key.split('.').reduce((accum%252C%2520key)%2520%253D%253E%2520accum%255Bkey%255D%252C%2520obj)%250A%250Aconst%2520compose%2520%253D%2520(...fns)%2520%253D%253E%2520res%2520%253D%253E%2520fns.reduce((accum%252C%2520next)%2520%253D%253E%2520next(accum)%252C%2520res)%250A%250Aconst%2520unfold%2520%253D%2520(f%252C%2520seed)%2520%253D%253E%2520%257B%250A%2520%2520const%2520go%2520%253D%2520(f%252C%2520seed%252C%2520acc)%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520const%2520res%2520%253D%2520f(seed)%250A%2520%2520%2520%2520return%2520res%2520%253F%2520go(f%252C%2520res%255B1%255D%252C%2520acc.concat(%255Bres%255B0%255D%255D))%2520%253A%2520acc%250A%2520%2520%257D%250A%2520%2520return%2520go(f%252C%2520seed%252C%2520%255B%255D)%250A%257D"
                                 style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;"
                                 sandbox="allow-scripts allow-same-origin">
-                            </iframe>
+                            </iframe> --}}
                         </div>
                     </div>
                     <div class="col-md-4 col-xl-3">

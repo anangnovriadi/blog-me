@@ -15,9 +15,8 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Categories <span class="arrow"></span></a>
+                    <a class="nav-link" href="#">Technology <span class="arrow"></span></a>
                     <nav class="nav columns">
-                        <a class="nav-link" href="#">Technology</a>
                         <a class="nav-link" href="#">Programming</a>
                         <a class="nav-link" href="#">Devops</a>
                     </nav>

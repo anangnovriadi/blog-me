@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Post;
+use Illuminate\Support\Carbon;
 
 class PostController extends Controller
 {
     public function view() {
         $posts = Post::orderBy('created_at', 'DESC')->limit(4)->get();
-
+        
         return view('home')->withPosts($posts);
     }
 
@@ -44,5 +45,12 @@ class PostController extends Controller
             
             echo $output;
         }
+    }
+
+    public function detail($slug) {
+        $post = Post::where('slug_name', $slug)->first();
+        $create = Carbon::parse($post->created_at)->format('F d, Y');
+
+        return view('detail', compact('post', 'create'));
     }
 }
