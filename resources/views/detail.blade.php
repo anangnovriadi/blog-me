@@ -28,56 +28,45 @@
                 </div>
             </div>
         </div>
-
+        {{-- {{ dd($comments) }} --}}
         {{-- Comment --}}
         <div class="section bg-gray">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <div class="media-list">
-                            <div class="media">
-                                <img class="avatar avatar-sm mr-4" src="{{ asset('web/assets/img/avatar/1.jpg') }}" alt="...">
-                                <div class="media-body">
-                                    <div class="small-1">
-                                    <strong>Maryam Amiri</strong>
-                                    <time class="ml-4 opacity-70 small-3" datetime="2018-07-14 20:00">24 min ago</time>
+                        @if (count($comments) < 0)
+                            @foreach ($comments as $comment)
+                            <div class="media-list">
+                                <div class="media">
+                                    <img class="avatar avatar-sm mr-4" src="{{ asset('web/assets/img/avatar/1.jpg') }}" alt="...">
+                                    <div class="media-body">
+                                        <div class="small-1">
+                                        <strong>{{ $comment->name }}</strong>
+                                        <time class="ml-4 opacity-70 small-3" datetime="{{ $comment->created_at }}">{{ $comment->created_at->diffForHumans() }}</time>
+                                        </div>
+                                        <p class="small-2 mb-0">{{ $comment->message }}.</p>
                                     </div>
-                                    <p class="small-2 mb-0">Thoughts his tend and both it fully to would the their reached drew project the be I hardly just tried constructing I his wonder, that his software and need out where didn't the counter productive.</p>
                                 </div>
                             </div>
-                            <div class="media">
-                                <img class="avatar avatar-sm mr-4" src="{{ asset('web/assets/img/avatar/2.jpg') }}" alt="...">
-                                <div class="media-body">
-                                    <div class="small-1">
-                                    <strong>Hossein Shams</strong>
-                                    <time class="ml-4 opacity-70 small-3" datetime="2018-07-14 20:00">6 hours ago</time>
-                                    </div>
-                                    <p class="small-2 mb-0">Was my suppliers, has concept how few everything task music.</p>
-                                </div>
+                            @endforeach
+                        @endif
+                            <div class="text-center pb-5">
+                                No Comment
                             </div>
-                            <div class="media">
-                                <img class="avatar avatar-sm mr-4" src="{{ asset('web/assets/img/avatar/3.jpg') }}" alt="...">
-                                <div class="media-body">
-                                    <div class="small-1">
-                                    <strong>Sarah Hanks</strong>
-                                    <time class="ml-4 opacity-70 small-3" datetime="2018-07-14 20:00">Yesterday</time>
-                                    </div>
-                                    <p class="small-2 mb-0">Been me have the no a themselves, agency, it that if conduct, posts, another who to assistant done rattling forth there the customary imitation.</p>
-                                </div>
-                            </div>
-                        </div>
                         <hr>
-                        <form action="#" method="POST">
+                        <form action="{{ route('comment') }}" method="POST">
+                            {{ csrf_field() }}
                             <div class="row">
+                                <input type="hidden" name="id" placeholder="Name" value="{{ $post->id }}" required>
                                 <div class="form-group col-12 col-md-6">
-                                    <input class="form-control" type="text" placeholder="Name">
+                                    <input class="form-control" type="text" name="name" placeholder="Name" required>
                                 </div>
                                 <div class="form-group col-12 col-md-6">
-                                    <input class="form-control" type="text" placeholder="Email">
+                                    <input class="form-control" type="email" name="email" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Comment" rows="4"></textarea>
+                                <textarea class="form-control" placeholder="Comment" name="message" rows="4" required></textarea>
                             </div>
                             <button class="btn btn-primary btn-block" type="submit">Submit your comment</button>
                         </form>

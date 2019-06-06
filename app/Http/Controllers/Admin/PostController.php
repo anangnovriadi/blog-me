@@ -37,8 +37,6 @@ class PostController extends Controller
             'slug_name' => $slug,
             'image_thumb' => $foto_name
         ]);
-
-        
             
         return redirect()->route('post.index');
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Post;
+use App\Model\Comment;
 use Illuminate\Support\Carbon;
 
 class PostController extends Controller
@@ -51,6 +52,8 @@ class PostController extends Controller
         $post = Post::where('slug_name', $slug)->first();
         $create = Carbon::parse($post->created_at)->format('F d, Y');
 
-        return view('detail', compact('post', 'create'));
+        $comments = Comment::where('post_id', $post->id)->get();
+
+        return view('detail', compact('post', 'create', 'comments'));
     }
 }

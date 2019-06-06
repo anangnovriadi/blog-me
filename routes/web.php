@@ -12,7 +12,7 @@
 */
 
 // Front
-Route::get('/', 'PostController@view');  
+Route::get('/', 'PostController@view')->name('home');  
 Route::post('/load', 'PostController@loadMore');
 
 Route::get('/detail', function () {
@@ -20,6 +20,8 @@ Route::get('/detail', function () {
 });
 
 Route::get('/detail/{slug}', 'PostController@detail')->name('detail');
+Route::post('/comment/create', 'CommentController@sendComment')->name('comment');
+// Route::get('/comment', 'CommentController@getComment')->name('comment.index');
 
 
 // Admin

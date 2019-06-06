@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-left">
             <button class="navbar-toggler" type="button">☰</button>
-            <a class="navbar-brand" href="../index.html">
+            <a class="navbar-brand" href="{{ route('home') }}">
               <img class="logo-dark" src="{{ asset('web/assets/img/logo-nang-dark.png') }}" alt="logo">
               <img class="logo-light" src="{{ asset('web/assets/img/logo-nang.png') }}" alt="logo">
             </a>
@@ -12,7 +12,7 @@
             <span class="navbar-divider d-mobile-none"></span>
             <ul class="nav nav-navbar">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Technology <span class="arrow"></span></a>
