@@ -15,6 +15,6 @@ class CommentController extends Controller
             'message' => $request->message
         ]);
 
-        return redirect()->route('detail');
+        return redirect()->back();
     }
 }

@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        @if (count($comments) < 0)
+                        @if (count($comments) > 0)
                             @foreach ($comments as $comment)
                             <div class="media-list">
                                 <div class="media">
