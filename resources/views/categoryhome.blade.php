@@ -5,7 +5,7 @@
   <div class="container">
       <div class="row">
           <div class="col-md-8 mx-auto">
-              <p class="lead-2 opacity-90 mt-6">Result | Artikel</p>
+              <h2 class="lead-3 opacity-90 mt-6">Result | Artikel</h2>
           </div>
       </div>
   </div>

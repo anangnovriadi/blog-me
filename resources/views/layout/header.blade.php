@@ -18,12 +18,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Technology <span class="arrow"></span></a>
                     <nav class="nav columns">
-                        <a class="nav-link" href="{{ route('category.home','1') }}">Programming</a>
-                        <a class="nav-link" href="#">Devops</a>
+                        <a class="nav-link" href="{{ route('category.home', '7') }}">Programming</a>
+                        <a class="nav-link" href="{{ route('category.home', '4') }}">Devops</a>
                     </nav>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://images.unsplash.com/photo-1504616796709-0f9a325affb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80">Artikel</a>
+                    <a class="nav-link" href="{{ route('category.home', '6') }}">Artikel</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/anang-novriadi-b04690114/">About</a>
