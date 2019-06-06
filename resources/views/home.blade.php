@@ -53,37 +53,18 @@
                             </form>
                                 <hr>
                                 <h6 class="sidebar-title">Top posts</h6>
-                                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                                    <img class="rounded w-65px mr-4" src="{{ asset('web/assets/img/thumb/4.jpg') }}">
-                                    <p class="media-body small-2 lh-4 mb-0">Thank to Maryam for joining our team</p>
-                                </a>
-                                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                                    <img class="rounded w-65px mr-4" src="{{ asset('web/assets/img/thumb/3.jpg') }}">
-                                    <p class="media-body small-2 lh-4 mb-0">Best practices for minimalist design</p>
-                                </a>
-                                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                                    <img class="rounded w-65px mr-4" src="{{ asset('web/assets/img/thumb/5.jpg') }}">
-                                    <p class="media-body small-2 lh-4 mb-0">New published books for product designers</p>
-                                </a>
-
-                                <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                                    <img class="rounded w-65px mr-4" src="{{ asset('web/assets/img/thumb/2.jpg') }}">
-                                    <p class="media-body small-2 lh-4 mb-0">Top 5 brilliant content marketing strategies</p>
-                                </a>
+                                @foreach ($posts as $post)
+                                    <a class="media text-default align-items-center mb-5" href="blog-single.html">
+                                        <img class="rounded w-65px mr-4" src="{{ asset('admin/'.$post->image_thumb) }}">
+                                        <p class="media-body small-2 lh-4 mb-0">{{ $post->name }}</p>
+                                    </a>
+                                @endforeach
                                 <hr>
                                 <h6 class="sidebar-title">Tags</h6>
                                 <div class="gap-multiline-items-1">
-                                    <a class="badge badge-secondary" href="#">Record</a>
-                                    <a class="badge badge-secondary" href="#">Progress</a>
-                                    <a class="badge badge-secondary" href="#">Customers</a>
-                                    <a class="badge badge-secondary" href="#">Freebie</a>
-                                    <a class="badge badge-secondary" href="#">Offer</a>
-                                    <a class="badge badge-secondary" href="#">Screenshot</a>
-                                    <a class="badge badge-secondary" href="#">Milestone</a>
-                                    <a class="badge badge-secondary" href="#">Version</a>
-                                    <a class="badge badge-secondary" href="#">Design</a>
-                                    <a class="badge badge-secondary" href="#">Customers</a>
-                                    <a class="badge badge-secondary" href="#">Job</a>
+                                    @foreach ($categories as $category)
+                                        <a class="badge badge-secondary" href="#">{{ $category->name }}</a>   
+                                    @endforeach
                                 </div>
                             <hr>
                             <h6 class="sidebar-title">About Author</h6>

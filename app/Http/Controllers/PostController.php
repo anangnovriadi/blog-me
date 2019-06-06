@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use App\Model\Post;
 use App\Model\Comment;
 use Illuminate\Support\Carbon;
+use App\Model\Category;
 
 class PostController extends Controller
 {
     public function view() {
         $posts = Post::orderBy('created_at', 'DESC')->limit(4)->get();
-        
-        return view('home')->withPosts($posts);
+        $categories = Category::all();
+
+        return view('home', compact('posts', 'categories'));
     }
 
     public function loadMore(Request $request) {
@@ -53,7 +55,8 @@ class PostController extends Controller
         $create = Carbon::parse($post->created_at)->format('F d, Y');
 
         $comments = Comment::where('post_id', $post->id)->get();
+        $tag = explode(" ", $post->tag);
 
-        return view('detail', compact('post', 'create', 'comments'));
+        return view('detail', compact('post', 'create', 'comments', 'tag'));
     }
 }

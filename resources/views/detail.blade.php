@@ -19,16 +19,15 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="gap-xy-2 mt-6">
-                            <a class="badge badge-pill badge-secondary" href="#">Record</a>
-                            <a class="badge badge-pill badge-secondary" href="#">Progress</a>
-                            <a class="badge badge-pill badge-secondary" href="#">Customers</a>
-                            <a class="badge badge-pill badge-secondary" href="#">News</a>
+                        @foreach ($tag as $item)
+                            <a class="badge badge-pill badge-secondary" href="#">{{ $item }}</a>   
+                        @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {{-- {{ dd($comments) }} --}}
+
         {{-- Comment --}}
         <div class="section bg-gray">
             <div class="container">
@@ -50,9 +49,9 @@
                             </div>
                             @endforeach
                         @endif
-                            <div class="text-center pb-5">
-                                No Comment
-                            </div>
+                        <div class="text-center pb-5">
+                            No Comment
+                        </div>
                         <hr>
                         <form action="{{ route('comment') }}" method="POST">
                             {{ csrf_field() }}
