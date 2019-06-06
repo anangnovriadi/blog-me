@@ -5,7 +5,8 @@
   <div class="container">
       <div class="row">
           <div class="col-md-8 mx-auto">
-              <h2 class="lead-3 opacity-90 mt-6">Result | Artikel</h2>
+              <h2 class="lead-3 opacity-90 mt-6">Result | {{ ucwords($category->name) }}</h2>
+              
           </div>
       </div>
   </div>
