@@ -33,12 +33,14 @@
             <div class="social">
                 <a class="social-facebook" href="https://www.facebook.com/thethemeio"><i class="fa fa-facebook"></i></a>
                 <a class="social-instagram" href="https://www.instagram.com/thethemeio/"><i class="fa fa-instagram"></i></a>
+                <a class="social-facebook"></a>
             </div>
         </div>
 
         <div class="col-lg-6">
             <div class="nav nav-bold nav-uppercase nav-trim justify-content-lg-center">
-                <a class="nav-link" href="../uikit/index.html">made with &hearts;</a>
+                <a class="nav-link" href="../uikit/index.html">made with &hearts; by anang novriadi</a>
+                <a class="nav-link"></a>
             </div>
         </div>
 
