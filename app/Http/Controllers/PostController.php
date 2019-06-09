@@ -13,8 +13,10 @@ class PostController extends Controller
     public function view() {
         $posts = Post::orderBy('created_at', 'DESC')->limit(4)->get();
         $categories = Category::all();
+        $categorylim = Category::limit(2)->get();
+        $artikel = Category::where('name', 'artikel')->first();
 
-        return view('home', compact('posts', 'categories'));
+        return view('home', compact('posts', 'categories', 'categorylim', 'artikel'));
     }
 
     public function loadMore(Request $request) {

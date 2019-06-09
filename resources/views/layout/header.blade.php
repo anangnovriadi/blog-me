@@ -18,12 +18,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Technology <span class="arrow"></span></a>
                     <nav class="nav columns">
-                        <a class="nav-link" href="{{ route('category.home', '7') }}">Programming</a>
-                        <a class="nav-link" href="{{ route('category.home', '4') }}">Devops</a>
+                        {{-- @foreach ($categorylim as $item)
+                            <a class="nav-link" href="{{ route('category.home', $item->id) }}">{{ ucwords($item->name) }}</a>
+                        @endforeach --}}
+                        <a class="nav-link" href="{{ route('category.home', '2') }}">Programming</a>
+                        <a class="nav-link" href="{{ route('category.home', '3') }}">Devops</a>
                     </nav>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('category.home', '6') }}">Artikel</a>
+                    {{-- <a class="nav-link" href="{{ route('category.home', 'artikel') }}">{{ ucwords($artikel->name) }}</a> --}}
+                    <a class="nav-link" href="{{ route('category.home', '1') }}">Artikel</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/anang-novriadi-b04690114/">About</a>

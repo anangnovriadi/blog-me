@@ -22,6 +22,7 @@ Route::get('/detail', function () {
 Route::get('/detail/{slug}', 'PostController@detail')->name('detail');
 Route::post('/comment/create', 'CommentController@sendComment')->name('comment');
 Route::get('/category/{id}', 'CategoryController@view')->name('category.home');
+Route::get('/category/{name}', 'CategoryController@side')->name('category.side');
 
 // Admin
 Route::prefix('admin')->group(function() {
