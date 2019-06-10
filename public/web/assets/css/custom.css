@@ -8,7 +8,7 @@
     max-height: 45px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 667px) {
     .img-h {
         min-height: 160px;
         max-height: 160px;
