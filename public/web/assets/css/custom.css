@@ -7,3 +7,10 @@
     min-height: 45px;
     max-height: 45px;
 }
+
+@media screen and (max-width: 320px) {
+    .img-h {
+        min-height: 150px;
+        max-height: 150px;
+    }
+}
