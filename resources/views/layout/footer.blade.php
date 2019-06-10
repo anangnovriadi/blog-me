@@ -39,7 +39,7 @@
 
         <div class="col-lg-6">
             <div class="nav nav-bold nav-uppercase nav-trim justify-content-lg-center">
-                <a class="nav-link" href="../uikit/index.html">made with &hearts; by anang novriadi</a>
+                <a class="nav-link" href="https://github.com/anangnovriadi">made with &hearts; by anang novriadi</a>
                 <a class="nav-link"></a>
             </div>
         </div>
