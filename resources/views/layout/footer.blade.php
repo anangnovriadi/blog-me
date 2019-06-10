@@ -31,8 +31,8 @@
 
         <div class="col-6 col-lg-3 text-right order-lg-last">
             <div class="social">
-                <a class="social-facebook" href="https://www.facebook.com/thethemeio"><i class="fa fa-facebook"></i></a>
-                <a class="social-instagram" href="https://www.instagram.com/thethemeio/"><i class="fa fa-instagram"></i></a>
+                <a class="social-facebook" href="https://www.facebook.com/anang.bagus"><i class="fa fa-facebook"></i></a>
+                <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
                 <a class="social-facebook"></a>
             </div>
         </div>
