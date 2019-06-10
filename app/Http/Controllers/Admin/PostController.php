@@ -20,13 +20,13 @@ class PostController extends Controller
         $pathToStore = public_path('admin');
         $slug = Str::slug($request->name);
 
-        // if($request->hasFile('image_thumb')) {
+        if($request->hasFile('image_thumb')) {
             $foto = $request->file('image_thumb');
             $filename = $foto->getClientOriginalName(); 
             $extension = $foto->getClientOriginalExtension();
             $foto_name = sha1($filename . time()) . '.' . $extension;
             $foto->move($pathToStore, $foto_name);
-        // }
+        }
 
         Post::create([
             'name' => $request->name,
