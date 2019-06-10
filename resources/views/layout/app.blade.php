@@ -11,6 +11,7 @@
     <!-- Styles -->
     <link href="{{ asset('web/assets/css/page.min.css') }}" rel="stylesheet">
     <link href="{{ asset('web/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('web/assets/css/custom.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">

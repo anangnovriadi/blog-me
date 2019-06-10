@@ -22,9 +22,9 @@
                                 @foreach ($posts as $post)
                                     <div class="col-md-6">
                                         <div class="card border hover-shadow-6 mb-6">
-                                            <a href="{{ route('detail', $post->slug_name) }}"><img class="card-img-top" src="{{ asset('admin/'.$post->image_thumb) }}" alt="Card image cap"></a>
+                                            <a href="{{ route('detail', $post->slug_name) }}"><img class="card-img-top img-h" src="{{ asset('admin/'.$post->image_thumb) }}" alt="Card image cap"></a>
                                             <div class="p-6 text-center">
-                                                <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="{{ route('detail', $post->slug_name) }}">{{ $post->category->name }}</a></p>
+                                                <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="{{ route('detail', $post->slug_name) }}">{{ $post->category->name }} | {{ $post->author }}</a></p>
                                                 <h5 class="mb-0"><a class="text-dark" href="{{ route('detail', $post->slug_name) }}">{{ $post->name }}</a></h5>
                                             </div>
                                         </div>
