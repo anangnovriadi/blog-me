@@ -48,10 +48,11 @@
                                 </div>
                             </div>
                             @endforeach
-                        @endif
+                        @else
                         <div class="text-center pb-5">
                             No Comment
                         </div>
+                        @endif
                         <hr>
                         <form action="{{ route('comment') }}" method="POST">
                             {{ csrf_field() }}
