@@ -55,7 +55,7 @@
                                 <h6 class="sidebar-title">Top posts</h6>
                                 @foreach ($posts as $post)
                                     <a class="media text-default align-items-center mb-5" href="blog-single.html">
-                                        <img class="rounded w-65px mr-4" src="{{ asset('admin/'.$post->image_thumb) }}">
+                                        <img class="rounded w-65px mr-4 img-sid" src="{{ asset('admin/'.$post->image_thumb) }}">
                                         <p class="media-body small-2 lh-4 mb-0">{{ $post->name }}</p>
                                     </a>
                                 @endforeach
