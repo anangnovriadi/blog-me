@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <title>Nang Ning - Blog</title>
+    <title>Nang Ning - Learn Together</title>
 
     <!-- Styles -->
     <link href="{{ asset('web/assets/css/page.min.css') }}" rel="stylesheet">
