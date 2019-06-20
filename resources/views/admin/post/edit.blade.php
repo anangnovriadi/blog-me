@@ -10,8 +10,8 @@
                 <form action="{{ route('post.update', $posts->id) }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('PATCH') }}
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6">
+                    <!-- <div class="row"> -->
+                        <div class="col-md-12 col-lg-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h4>Please edit data in below</h4>
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </form>
             </div>
         </section>
