@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="text-center mt-7">
                     <h2>{{ $post->name }}</h2>
-                    <p>{{ $create }} | <a href="#">{{ $post->author }}</a></p>
+                    <p>Dipublikasikan oleh: <a href="#">{{ $post->author }}</a> - ({{ $create }})</p>
                 </div>
                 <div class="text-center my-7">
                     <img class="rounded-md" src="{{ asset('admin/'.$post->image_thumb) }}" alt="...">
