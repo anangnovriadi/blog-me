@@ -9,8 +9,8 @@
             <div class="section-body">
                 <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6">
+                    <!-- <div class="row"> -->
+                        <div class="col-md-12 col-lg-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h4>Please insert data in below</h4>
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6">
+                        <div class="col-md-12 col-lg-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="form-group">
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </form>
             </div>
         </section>

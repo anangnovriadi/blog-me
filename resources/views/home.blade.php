@@ -11,6 +11,7 @@
             </div>
         </div>
     </header>
+    
     <main class="main-content">
         <div class="section bg-gray">
             <div class="container">
