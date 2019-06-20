@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6">
+                        <div class="col-md-12 col-lg-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="form-group">
