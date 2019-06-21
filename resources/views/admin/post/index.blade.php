@@ -28,7 +28,7 @@
                                                 <th>Author</th>
                                                 <th>Tag</th>
                                                 <th>Category</th>
-                                                <th>Image Thumb</th>
+                                                <th>Image</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -41,7 +41,7 @@
                                                 <td>{{ $post->author }}</td>
                                                 <td>{{ $post->tag }}</td>
                                                 <td>{{ $post->category->name }}</td>
-                                                <td><img style="width: 42px; height: 30px;" src="{{ asset('admin/'.$post->image_thumb) }}" /></td>
+                                                <td><img style="width: 40px; height: 30px;" src="{{ asset('admin/'.$post->image_thumb) }}" /></td>
                                                 <td>
                                                     <div style="display: flex;">
                                                         <a href="{{ route('post.edit', $post->id) }}" class="btn btn-secondary mr-2">Edit</a>
